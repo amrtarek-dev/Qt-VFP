@@ -13,13 +13,25 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools)
 
 set(TS_FILES Qt-VFP_en_US.ts)
+set(SRC_H
+    View/mainview.h
+    View/setuptab.h
+)
+set(SRC_CPP
+    main.cpp
+    View/mainview.cpp
+    View/setuptab.cpp
+)
+set(SRC_UI
+    View/mainview.ui
+    View/setuptab.ui
+)
 
 set(PROJECT_SOURCES
-        main.cpp
-        View/mainview.cpp
-        View/mainview.h
-        View/mainview.ui
-        ${TS_FILES}
+    ${SRC_H}
+    ${SRC_CPP}
+    ${SRC_UI}
+    ${TS_FILES}
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

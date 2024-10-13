@@ -13,22 +13,38 @@
   <property name="windowTitle">
    <string>Virtual Front Panel - Gating Controller</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/at.jpg</normaloff>:/at.jpg</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QTabWidget" name="tabWidget">
+      <property name="tabPosition">
+       <enum>QTabWidget::TabPosition::North</enum>
+      </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::TextElideMode::ElideMiddle</enum>
       </property>
       <widget class="QWidget" name="tabControl">
        <attribute name="title">
         <string>Control</string>
        </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2"/>
       </widget>
       <widget class="QWidget" name="tabSetup">
        <attribute name="title">
         <string>Setup</string>
        </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <layout class="QVBoxLayout" name="loSetupTab"/>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
